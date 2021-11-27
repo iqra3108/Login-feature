@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label>Enter Username or Phone no:</label>
+    <input type="text" id="nt">
+    <br>
+    <label>Enter Password:</label>
+    <input type="text" id="ag">
+    <br>
+    <button onclick="check()">Show</button>
+
+    <script>
+        function check() {
+            var user = document.getElementById("nt").value;
+            var pass = document.getElementById("ag").value;
+            if ((user == "pny123" && pass == "admin123") || (user =="12345"  && pass == "admin123") ) {
+              
+                //for redirecting the page
+                location.href = "Dashboard.html";
+                sessionStorage.setItem("user", "pny123");
+            } else {
+                alert("Invalid Username/Password!");
+            }
+        }
+        /*
+        username: pny123
+        phone: 12345
+        password: admin123
+        */
+    </script>
+</body>
+</html>
